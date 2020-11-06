@@ -1,0 +1,50 @@
+.tile-regular {
+  width: 80px;
+  height: 75px;
+  background-color: #A8A4A4;
+  margin: 25px;
+  border-radius: 10%;
+}
+
+.tile-special {
+  width: 80px;
+  height: 75px;
+  background-color: #DDD77E;
+  margin: 25px;
+  border-radius: 10%;
+}
+
+.tile-game-over {
+  width: 80px;
+  height: 75px;
+  background-color: #BB4343;
+  margin: 25px;
+  border-radius: 10%;
+}
+
+.tile-won {
+  width: 80px;
+  height: 75px;
+  background-color: #4E5CDA;
+  margin: 25px;
+  border-radius: 10%;
+}
+
+.tile-number {
+  font-size: 15px;
+  margin: 0px;
+  padding: 0 0 0 4px;
+  vertical-align: top;
+}
+
+.is-stepped {
+  margin: 0px;
+  padding: 0px;
+  vertical-align: center;
+  text-align: center;
+}
+
+.pawn {
+  width: 40px;
+  height: 40px;
+}

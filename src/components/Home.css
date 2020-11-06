@@ -1,0 +1,14 @@
+.top-container {
+  background-color: #000000;
+  color: #919191;
+  text-align: center;
+  border: 7px solid #6b6b6b;
+  border-radius: 25px;
+  margin: 10px 0px 15px 0px;
+}
+
+.top-container button {
+  width: 70px;
+  height: 30px;
+  margin: 20px;
+}
