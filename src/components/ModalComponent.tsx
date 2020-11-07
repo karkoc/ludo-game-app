@@ -3,32 +3,40 @@ import Modal from "react-modal";
 
 import "./ModalComponent.css";
 
-const ModalComponent = ({ modalOpen, currentField, endGame, throwsHistory}: any) => {
+interface ModalComponentProps {
+  modalOpen: boolean;
+  currentField: number;
+  endGame: any;
+  throwsHistory: number[];
+}
+
+const ModalComponent: React.FC<ModalComponentProps> = (props) => {
+
   const [avg, setAvg] = useState<number>(0);
-  let numberOfThrows = throwsHistory.length;
+  let numberOfThrows = props.throwsHistory.length;
 
   useEffect(() => {
-    const sum: number = throwsHistory.reduce((a: any, b: any) => a + b, 0);
-    const avg: number = sum / throwsHistory.length;
+    const sum: number = props.throwsHistory.reduce((a: any, b: any) => a + b, 0);
+    const avg: number = sum / props.throwsHistory.length;
     setAvg(avg);
-  }, [throwsHistory]);
+  }, [props.throwsHistory]);
 
   const renderEndGameTitle = useMemo(() => {
-    if (currentField === 20) {
+    if (props.currentField === 20) {
       return <div>You won!</div>;
-    } else if (currentField === 12) {
+    } else if (props.currentField === 12) {
       return <div>You lost!</div>;
     }
     return;
-  }, [currentField]);
+  }, [props.currentField]);
 
   return (
     <div>
       <Modal
-        isOpen={modalOpen}
-        onRequestClose={endGame}
+        isOpen={props.modalOpen}
+        onRequestClose={props.endGame}
         className="modal"
-        ariaHideApp={false}
+        // ariaHideApp={false}
       >
         <div className="modal-content">
           <span className="result-span">{renderEndGameTitle}</span>
@@ -37,7 +45,7 @@ const ModalComponent = ({ modalOpen, currentField, endGame, throwsHistory}: any)
           <br />
           <span>Average throw value: {avg.toFixed(2)}</span>
           <br />
-          <button onClick={endGame} className="play-again-button">
+          <button onClick={props.endGame} className="play-again-button">
           Play again!
           </button>
         </div>
