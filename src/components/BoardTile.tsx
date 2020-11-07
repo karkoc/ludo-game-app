@@ -13,10 +13,9 @@ const BoardTile: React.FC<BoardTileProps> = (props) => {
     <div className={`tile-${props.tileType}`}>
       <p className="tile-number"> {props.numberOfTile} </p>
       <p className="is-stepped">
-        {" "}
         {props.isStepped && (
           <img className="pawn" src={Pawn} alt="not found" />
-        )}{" "}
+        )}
       </p>
     </div>
   );
