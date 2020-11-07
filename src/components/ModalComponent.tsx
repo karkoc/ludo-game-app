@@ -36,7 +36,6 @@ const ModalComponent: React.FC<ModalComponentProps> = (props) => {
         isOpen={props.modalOpen}
         onRequestClose={props.endGame}
         className="modal"
-        // ariaHideApp={false}
       >
         <div className="modal-content">
           <span className="result-span">{renderEndGameTitle}</span>
