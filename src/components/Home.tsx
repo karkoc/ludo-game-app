@@ -16,7 +16,7 @@ const Home: React.FC = () => {
       <div className="top-container">
         <h3>Number of points thrown:</h3>
         <div className="buttons-container">
-          {[1, 2, 3, 4, 5, 6].map((number: number) => (
+          {[1, 2, 3, 4, 5, 6].map((number) => (
             <button onClick={() => onClickHandler(number)}> {number} </button>
           ))}
         </div>
